@@ -29,7 +29,7 @@ int main() {
 
     Die myDie;
 
-    myDie.setValue();
+    myDie.rollDie();
 
     display_rules(); // call the display_rules function
 
@@ -115,11 +115,11 @@ void roll(GameState &g) {
 
     Die myDie; // calls the default constructor
 
-    myDie.setValue(); // calling the public function to roll the die
+    myDie.rollDie(); // calling the public function to roll the die
 
-    std::cout << "Die: " << myDie.getValue();
+    std::cout << "Die: " << myDie.getDieValue();
 
-    if (myDie.getValue() == 1) {
+    if (myDie.getDieValue() == 1) {
 
         std::cout << "\nTurn over. No score.\n";
 
@@ -130,7 +130,7 @@ void roll(GameState &g) {
 
     else {
 
-        g.score_this_turn += myDie.getValue();
+        g.score_this_turn += myDie.getDieValue();
 
         std::cout << " - Running score this turn: "
                   << g.score_this_turn;

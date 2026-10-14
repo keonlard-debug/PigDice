@@ -3,19 +3,12 @@
 #include <random>
 
 class Die {
-
 private:
-
-    int m_value;
-    int m_numOfSides;
-
+    int m_dieValue;
 public:
-
     Die();
-    void set_numOfSides(int numOfSides);
-    int getNumOfSides();
-    void setValue();
-    int getValue();
+    void rollDie();
+    int getDieValue() const;
 };
 
 
