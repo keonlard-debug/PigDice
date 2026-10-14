@@ -11,12 +11,13 @@ private:
     Die m_myDie;
 public:
     Turn();
-    //Turn(&);
     void takeTurn();
-    int getScoreThisTurn();
+    int getScoreThisTurn() const;
     void resetTurnOver();
     int getTurnCount();
-    void resetGameOver();
+    void resetScoreThisTurn();
+private:
+    void roll();
 };
 
 
